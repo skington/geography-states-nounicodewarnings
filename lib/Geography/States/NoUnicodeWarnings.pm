@@ -38,7 +38,7 @@ although they may not be proper Unicode.
 =cut
 
 {
-    use open ':encoding(std)';
+    use open ':std';
     Module::Load::load('Geography::States');
 }
 
