@@ -1,3 +1,7 @@
+0.003 2015-07-20
+	[Bugfix]
+		Geography::States wasn't listed as a prequisite.
+
 0.002 2015-07-20
 	[Bugfix]
 		I can't read the documentation for open properly.
