@@ -7,7 +7,7 @@ no warnings 'uninitialized';
 
 use Module::Load;
 
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 $VERSION = eval $VERSION;
 
 =head1 NAME
@@ -27,9 +27,14 @@ for a while, but then e.g. the USA, Canada etc. haven't added states recently,
 so there hasn't been a need.
 
 Under certain circumstances - specifically if you have set a global character
-encoding for PerlIO - using Geography::States will cause warnings. This
-module fixes that. Just say C<use Geography::States::NoUnicodeWarnings> where
-you would otherwise have said C<use Geography::States> and the warnings
+encoding for PerlIO - using Geography::States may cause warnings at compile-
+time. Or it may not; you may be lucky. I haven't managed to narrow down
+exactly what causes the lack of warnings - it's not simply a matter of locale,
+for instance - but flavours of Perl between 5.10 and 5.14 appear to be
+affected.
+
+This module fixes that. Just say C<use Geography::States::NoUnicodeWarnings>
+where you would otherwise have said C<use Geography::States> and the warnings
 will go away.
 
 The Brazilian States that give the warnings will probably not be corrupted,
